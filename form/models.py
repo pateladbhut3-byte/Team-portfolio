@@ -1,0 +1,17 @@
+from django.db import models
+class Form(models.Model):
+    student_first_name=models.CharField(max_length=30)
+    student_middle_name=models.CharField(max_length=30)
+    student_last_name=models.CharField(max_length=30)
+    student_father_name=models.CharField(max_length=30)
+    student_mother_name=models.CharField(max_length=30)
+    student_mobile_no=models.CharField(max_length=15)
+    student_email=models.EmailField(unique=True)
+    student_aadhar_no=models.CharField(max_length=30)
+    student_dob=models.DateField()
+    student_gender=models.CharField(max_length=15)
+    student_course=models.CharField(max_length=50)
+    student_branch=models.CharField(max_length=50)
+    student_year=models.CharField(max_length=10)
+    student_category=models.CharField(max_length=30)
+    student_permanent_addresss=models.TextField()

@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section >
+            <form method="POST">
+                {% csrf_token %}
+            <label>
+                Physics
+            </label><br>
+            <input type="text" name="phy" class="form-control" required><br><br>
+            <label>
+                Chemistry
+            </label><br>
+            <input type="text" name="chem" class="form-control" required><br><br>
+            <label>
+                Maths
+            </label><br>
+            <input type="text" name="maths" class="form-control" required><br><br>
+            <label>
+                Hindi
+            </label><br>
+            <input type="text" name="hin" class="form-control" required><br><br>
+            <label>
+                English
+            </label><br>
+            <input type="text" name="eng" class="form-control" required><br><br>
+            <label>
+            <input type="submit" value="Calculate" class="form-control" style="background: blue; color: white;" />
+            <br><br>
+             <label>
+                Total Marks-
+            </label><br>
+            <input type="text" value="{{total}}" class="form-control" disabled>
+            <br><br>
+            <label>
+                Percentage-
+            </label><br>
+            <input type="text" value="{{percentage}}" class="form-control" disabled>
+            <br><br>
+             <label>
+                Division-
+            </label><br>
+            <input type="text" value="{{d}}" class="form-control" disabled>
+            <br><br>
+            </form>
+    </section>
+{% endblock  %}

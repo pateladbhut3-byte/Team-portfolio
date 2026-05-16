@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="container-fluid my-5">
+    <div class="container shadow ">
+            
+        <h2 class="pt-5 text-center text-capitalize"`>student information form</h2>
+
+<form method="POST" action = "{% url 'form' %}" class="frm_stu p-5 hello" >
+    {% csrf_token %}
+    <div class="row py-3 ">
+            <input type="text" name="student_first_name" placeholder="First Name" class="form-control col " id="fname" required><br><br>
+            <input type="text" name="student_middle_name" placeholder="Middle Name" class="form-control col mname"><br><br>
+            <input type="text" name="student_last_name" placeholder="Surname" class="form-control col lname"><br><br>
+        </div>
+    <div class="row py-3 ">
+            <input type="text" name="student_father_name" placeholder="Father's Name" class="form-control col" required><br><br>
+        </div>
+        <div class="row py-3">
+            <input type="text" name="student_mother_name" placeholder="Mother's Name" class="form-control col" required><br><br>
+        </div>
+        <div class="row py-3">
+            <div class="input-group mb-3">
+                <span class="input-group-text">+91</span>
+                <input type="text" name="student_mobile_no" class="form-control m-0 col" placeholder="Mobile No.">
+            </div>
+        </div>
+
+        <div class="row py-3">
+            <input type="email" name="student_email" placeholder="Email" class="form-control col" required><br><br>
+        </div>
+        <div class="row py-3">
+            <input type="text" name="student_aadhar_no" pattern="[0-9]{12}" class="form-control col" placeholder="12-digit Aadhar no."><br><br> 
+        </div>
+      <label class="my-1"> Date of Birth-</label>
+    <input type="date" name="student_dob" class="form-control" style="height: 42px; width: 100%;" required><br><br>
+    <div class="row px-2 mb-4 ">  
+            <select name="student_category" class="form-control col" style="height: 42px;" required>
+                <option value="">Category</option>
+                <option value="General">GENERAL</option>
+                <option value="OBC-NCL">OBC-NCL</option>
+                <option value="SC">SC</option>
+                <option value="ST">ST</option>
+            </select>
+            <br><br>
+            <select name="student_gender" class="form-control col ms-2" style="height: 42px;" required>
+                <option value="">Gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select><br><br>
+    </div>
+    <select name="student_course" class="form-control">
+        <option value="">-- SELECT YOUR COURSE --</option>
+        <option value="Bachelor of Technology">B.Tech</option>
+        <option value="Master of Technology">M.Tech</option>
+        <option value="Doctor of Philosophy">Ph. D</option>
+    </select><br><br>
+
+    <select name="student_branch" class="form-control">
+        <option value="">-- SELECT YOUR BRANCH --</option>
+        <option value="CSE">COMPUTER SCIENCE AND ENGINEERING (CSE)</option>
+        <option value="IT">INFORMATION TECHNOLOGY (IT)</option>
+        <option value="ECE">ELECTRONICS AND COMMUNICATION ENGINEERING (ECE)</option>
+        <option value="EEE">ELECTRICAL AND ELECTRONICS ENGINEERING (EEE)</option>
+        <option value="ME">MECHANICAL ENGINEERING (ME)</option>
+        <option value="CE">CIVIL ENGINEERING (CE)</option>
+        <option value="CHE">CHEMICAL ENGINEERING (CHE)</option>
+        <option value="AE">AEROSPACE ENGINEERING (AE)</option>
+        <option value="BT">BIOTECHNOLOGY (BT)</option>
+        <option value="AI">ARTIFICIAL INTELLIGENCE (AI)</option>
+        <option value="DS">DATA SCIENCE (DS)</option>
+        <option value="TT">TEXTILE TECHNOLOGY (TT)</option>
+        <option value="TC">TEXTILE CHEMISTRY (TC)</option>
+        <option value="TE">TEXTILE ENGINEERING (TE)</option>
+
+    </select><br><br>
+
+    <select name="student_year" class="form-control" required>
+        <option value="">-- SELECT YOUR YEAR --</option>
+        <option value="1st Year">1st Year</option>
+        <option value="2nd Year">2nd Year</option>
+        <option value="3rd Year">3rd Year</option>
+        <option value="4th Year">4th Year</option>
+    </select><br><br>
+
+    <textarea  name="student_permanent_addresss" class="form-control" placeholder="Permanent Address" rows="4" required></textarea><br><br>
+
+    <center>
+        <button type="submit" style="border-radius: 5px;">Submit</button>
+    </center>
+
+</form>
+    </div>
+</div>
+{% endblock  %}

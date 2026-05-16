@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+     <h1 class = "title mb-5">{{newsDetail.news_title}} </h1>
+     <p>
+        {{newsDetail.news_des | safe}}
+        
+     </p>
+     <h2>Available Files
+   
+     </h2>
+     
+     <div class="col-10">
+         
+ <iframe style="width: 100%; height: 720px;" src="/media/{{newsDetail.form_pdf}}">
+     </div>
+
+     
+    
+</section>
+{% endblock  %} 

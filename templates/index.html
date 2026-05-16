@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section>
+
+ <h3 class="mb-4 current">Updates</h3>
+    <marquee onmouseover="stop()" onmouseout="start()" behavior="alternate">
+        {%for news in newsData %} 
+           <a href="/newsdetails/{{news.news_slug}}">  <i class="fa-solid fa-circle fa-2xs"> </i> {{news.news_title}} </a>  &nbsp;  &nbsp;  &nbsp; &nbsp; &nbsp;
+        {% endfor %}
+    </marquee>
+    <div class="update">
+        <h2>
+            Importent Updates
+        </h2>
+        <h3>
+        <ul>
+            <li class="pt-4 ">
+                    <i class="fas fa-tag blink" style="color:red;"></i>
+                    <span style="color:red; font-weight:bold;" class="blink">NEW</span>
+                    &nbsp; General Knowledge Quiz for students. <a href="/quizs" target="_parent">Click here.</a>
+            </li>
+            <li class="pt-4 ">
+                    <i class="fas fa-tag blink" style="color:red;"></i>
+                    <span style="color:red; font-weight:bold;" class="blink">NEW</span>
+                    &nbsp; Even semester exams will start on 26 May.
+            </li>
+            <li class="pt-4 mt-4 frm_link">
+                <a href="/forms" >
+                    Student information form</a>
+            </li>
+
+        </ul>
+    </h3>
+   
+    </div>
+    <fieldset class="p-3" >
+<fieldset class="gallery-fieldset">
+    <legend>Sphurti 2k26</legend>
+
+    <div class="gallery">
+       <a href="/static/IMG_20260213_131356.jpg" target="_parent"> <img src="/static/IMG_20260213_131356.jpg" ></a>
+       <a href="/static/LMC_20260213_111328_ð¥ iPhone 14 Ultra Pixel.jpg" target="_parent"> <img src="/static/LMC_20260213_111328_ð¥ iPhone 14 Ultra Pixel.jpg" ></a>
+       <a href="/static/LMC_20260213_123045_ð¥ iPhone 14 Ultra Pixel.jpg" target="_parent"><img src="/static/LMC_20260213_123045_ð¥ iPhone 14 Ultra Pixel.jpg"></a>
+        <a href="/static/IMG_20260213_131331.jpg "target="_parent">  <img src="/static/IMG_20260213_131331.jpg" ></a>
+        <a href="/static/WhatsApp Image 2026-05-04 at 1.17.39 AM.jpeg" target="_parent"><img src="/static/WhatsApp Image 2026-05-04 at 1.17.39 AM.jpeg "></a>
+    </div>
+
+</fieldset>
+</section>
+{% endblock  %}

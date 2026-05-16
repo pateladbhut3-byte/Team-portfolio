@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% block content %}
+<section>
+    
+    <h2 class ="servi">What We Offer</h2>
+    <ul>
+        <li>Web Design</li>
+        <li>Frontend Development</li>
+        <li>Backend Development</li>
+    </ul>
+
+<div class="features">
+
+    {% for s in Services %}
+    <div class="card">
+        <div class="icon">
+            <i class="{{ s.service_icon }}"></i>
+        </div>
+        <h3>{{ s.service_title }}</h3>
+        <p>{{ s.service_des }}</p>
+    </div>
+    {% endfor %}
+</div>
+
+
+    
+
+</section>
+{% endblock  %}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="about_section">
+    <h1 class="name_ab p-4"> {{ about.name | safe }} &nbsp;</h1>
+    <h5 class ="info_ab pb-2"> <h3 style="padding:0; margin: 0;">About Info.-</h3><br><br> {{ about.about_info | safe }}</h5>
+    <p class="des_ab " > <h3 style="padding: 0; margin: 0%;"> Description- </h3><br><br>  {{ about.discription | safe }}</p>
+</div>
+{% endblock  %} 
